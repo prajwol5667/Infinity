@@ -14,11 +14,13 @@ public class assertion {
 		driver.get("https://www.facebook.com");
 		String title = driver.getTitle(); // getting the title of the facebook 
 		try {
-			Assert.assertEquals("Facebook - Login or Register", title);  // User of assertion 
+			Assert.assertEquals("Facebook - log in or sign up", title);  // User of assertion 
+			System.out.println("Test is passed");
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Test is failed");
 		}
 		
+		driver.close();
 		
 		
 	}
